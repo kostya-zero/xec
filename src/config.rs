@@ -24,7 +24,7 @@ impl ConfigManager {
     }
 
     pub fn write_config(config: ConfigModel) {
-        let cfg = serde_json::to_string(config).unwrap();
+        let cfg = serde_json::to_string(&config).unwrap();
         fs::write("xec.conf", cfg);
     }
 }
